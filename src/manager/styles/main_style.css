@@ -1,0 +1,39 @@
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 17, 2017, 10:16:50 PM
+    Author     : root
+*/
+.fa-icon {
+  -fx-font-family: 'FontAwesome';
+}
+.root{
+    -fx-background-image: url("../resources/images/background.jpg");
+}
+.banner_text{
+    -fx-font-size: 3.5em;
+    -fx-font-family: "Lemonada";
+    -fx-fill: #818181;
+    -fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );
+}
+.label{
+    -fx-font-size: 0.9em;
+    -fx-transition: 0.5s;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+}
+.input_field{
+    -fx-border-radius: 0px;
+    -fx-opacity: 0.8;
+    -fx-color:#222222;
+    -fx-font-size:2.0em; 
+}
+.input_button{
+     -fx-width:inherit;
+     -fx-font-size:1.5em; 
+}

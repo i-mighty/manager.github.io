@@ -1,0 +1,72 @@
+/*
+ * Empty Stylesheet file.
+ */
+.menu_pane{
+    -icons-color: rgb(61,114,144);
+   -fx-padding: 50px 20px 30px 20px;
+   -fx-background-image: url("../resources/images/background.jpg");
+}
+.menu_item{
+    -fx-font-family: 'Bellefair';
+    -fx-background: transparent;
+    -fx-font-size: 2.0em;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-border-bottom: 1px #818181;
+    -fx-halignment: center;
+    -fx-text-fill: #555555;
+}
+.menu_item:hover{
+    -fx-text-fill: #414141;
+}
+.menu_item:active{
+    -fx-background-color: #676767;
+    -fx-text-fill: #E7E7E7;
+}
+.menu_separator{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-fill: transparent;
+    -fx-opacity: 0.5;
+}
+.menu_banner{
+    -fx-font-family:Lemonada;
+   -fx-font-size:2.5em;
+   -fx-background: transparent;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-halignment: center;
+    -fx-text-fill: #555555;
+}
+.danger_text{
+    -fx-font-fill:#0000FF;
+}
+.img_rounded{
+    -fx-border-radius: 500em;
+    -fx-background-radius: 5;
+    -fx-background-color: firebrick;
+}
+.menu_pane_text{
+    -fx-font-size:2.2em;
+    -fx-font-family: 'Madison';
+    -fx-background: transparent;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+.split-pane:vertical > .split-pane-divider {  
+    -fx-padding: 0 0.05em 0 0.05em;  
+    -fx-border: transparent;
+    -fx-background-color: #767676;
+} 
+.split-pane:horizontal > .split-pane-divider {  
+    -fx-padding: 0 0.2em 0 0.2em;  
+    -fx-border: transparent;
+} 
+.top_pane_split_pane > .split-pane-divider {
+    -fx-padding: 0 0.2em 0 0.2em;  
+    -fx-background-color: transparent;
+}
+.header-pane{
+    -fx-background-image: url("../resources/images/backgroundLegit.jpg");
+    -fx-opacity:0.7;
+}

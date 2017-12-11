@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" stylesheets="@../styles/base.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manager.java.BaseController">
+   <content>
+      <SplitPane dividerPositions="0.225" prefHeight="800.0" prefWidth="1280.0">
+        <items>
+            <GridPane fx:id="home_btn" alignment="TOP_CENTER" styleClass="menu_pane" vgap="7.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+               </rowConstraints>
+               <children>
+                  <Button alignment="TOP_CENTER" contentDisplay="CENTER" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#goHome" styleClass="menu_item" text="Home" GridPane.halignment="center" GridPane.rowIndex="4">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Separator prefWidth="200.0" styleClass="menu_separator" GridPane.rowIndex="5" />
+                  <Button fx:id="all_users" alignment="TOP_CENTER" contentDisplay="CENTER" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#showAllUser" styleClass="menu_item" text="All Users" GridPane.halignment="center" GridPane.rowIndex="6">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>                  
+                  <Separator prefWidth="200.0" styleClass="menu_separator" GridPane.rowIndex="7" />
+                  <Button fx:id="active_users" alignment="TOP_CENTER" contentDisplay="CENTER" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#showActiveUsers" styleClass="menu_item" text="Active Users" GridPane.halignment="center" GridPane.rowIndex="8">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Separator prefWidth="200.0" styleClass="menu_separator" GridPane.rowIndex="9" />
+                  <Button fx:id="stats" alignment="TOP_CENTER" contentDisplay="CENTER" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#showStats" styleClass="menu_item" text=" Analysis/Statistics" GridPane.halignment="center" GridPane.rowIndex="10">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Separator prefWidth="200.0" styleClass="menu_separator" GridPane.rowIndex="11" />
+                  <Button fx:id="me" alignment="TOP_CENTER" contentDisplay="CENTER" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#myProfile" styleClass="menu_item" text="My Profile" GridPane.halignment="center" GridPane.rowIndex="12">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <GridPane alignment="BOTTOM_CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="15" GridPane.valignment="BOTTOM">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                     <children>
+                        <ImageView fx:id="img_thumb" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" styleClass="img_rounded" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <image>
+                              <Image url="@../resources/images/theKing.png" />
+                           </image>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </ImageView>
+                        <GridPane alignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                           <children>
+                              <Button fx:id="name_label" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="menu_pane_text" text="Username" GridPane.halignment="CENTER" GridPane.rowIndex="0" />
+			      <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="menu_pane_text" text="Email Address" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                           </children>
+                           <rowConstraints>
+                              <RowConstraints />
+                              <RowConstraints />
+                           </rowConstraints>
+                        </GridPane>
+                     </children>
+                     <rowConstraints>
+                        <RowConstraints />
+			<RowConstraints />
+                     </rowConstraints>
+                     <GridPane.margin>
+                        <Insets top="30.0" />
+                     </GridPane.margin>
+                  </GridPane>
+                  <Button fx:id="manager_text" alignment="CENTER" mnemonicParsing="false" styleClass="menu_banner" text="Manager" GridPane.halignment="CENTER" />
+                  <Separator prefWidth="200.0" styleClass="menu_separator" GridPane.rowIndex="13" />
+                  <Button fx:id="leave" mnemonicParsing="false" onAction="#logOut" text="Log Out" GridPane.halignment="CENTER" GridPane.rowIndex="14">
+                     <styleClass>
+                        <String fx:value="menu_item" />
+                        <String fx:value="danger_text" />
+                     </styleClass>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" />                  
+               </children>
+            </GridPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <SplitPane dividerPositions="0.1" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="header-pane">
+                           <children>
+                              <ImageView fitHeight="80.0" fitWidth="118.0" layoutX="111.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/images/theKing.png" />
+                                 </image>
+                              </ImageView>
+                              <Text fontSmoothingType="LCD" layoutX="283.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="THE BRAND NAME" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="DejaVu Sans Bold" size="55.0" />
+                                 </font>
+                                 <fill>
+                                    <LinearGradient endX="1.0" endY="1.0" startX="0.04326923076923077">
+                                       <stops>
+                                          <Stop color="BLACK" />
+                                          <Stop color="#0e6b75" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </fill>
+                                 <styleClass>
+                                    <String fx:value="banner_text" />
+                                    <String fx:value="banner_text" />
+                                 </styleClass>
+                              </Text>
+                           </children>
+                           <stylesheets>
+                              <URL value="@../styles/main_style.css" />
+                              <URL value="@../styles/base.css" />
+                           </stylesheets>
+                        </Pane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+                    </items>
+                  </SplitPane>
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </content>
+</ScrollPane>
