@@ -35,5 +35,10 @@ and open the template in the editor.
 }
 .input_button{
      -fx-width:inherit;
-     -fx-font-size:1.5em; 
+     -fx-font-size:2em; 
+     -fx-fill:#818181;
+}
+.login-button{
+    -fx-font-size: 2em;
+    -fx-fill:#818181;
 }

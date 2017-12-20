@@ -1,6 +1,10 @@
 /*
  * Empty Stylesheet file.
  */
+@font-face{
+    font-family: "FA";
+    src: url("../resources/fonts/fontawesome-webfont.ttf");
+}
 .menu_pane{
     -icons-color: rgb(61,114,144);
    -fx-padding: 50px 20px 30px 20px;
@@ -12,7 +16,6 @@
     -fx-font-size: 2.0em;
     -fx-background-color: transparent;
     -fx-border-color: transparent;
-    -fx-border-bottom: 1px #818181;
     -fx-halignment: center;
     -fx-text-fill: #555555;
 }
@@ -69,4 +72,7 @@
 .header-pane{
     -fx-background-image: url("../resources/images/backgroundLegit.jpg");
     -fx-opacity:0.7;
+}
+.table-icon{
+    -fx-font-family: FontAwesome;
 }

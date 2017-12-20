@@ -128,12 +128,7 @@
                     <items>
                         <Pane prefHeight="200.0" prefWidth="200.0" styleClass="header-pane">
                            <children>
-                              <ImageView fitHeight="80.0" fitWidth="118.0" layoutX="111.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../resources/images/theKing.png" />
-                                 </image>
-                              </ImageView>
-                              <Text fontSmoothingType="LCD" layoutX="283.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="THE BRAND NAME" textAlignment="CENTER">
+                              <Text fontSmoothingType="LCD" layoutX="261.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="THE BRAND NAME" textAlignment="CENTER">
                                  <font>
                                     <Font name="DejaVu Sans Bold" size="55.0" />
                                  </font>
@@ -156,7 +151,7 @@
                               <URL value="@../styles/base.css" />
                            </stylesheets>
                         </Pane>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+                        <AnchorPane fx:id="hostPane" prefHeight="200.0" prefWidth="200.0" />
                     </items>
                   </SplitPane>
                </children></AnchorPane>

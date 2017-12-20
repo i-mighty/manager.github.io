@@ -6,6 +6,7 @@
 package manager.java;
 
 import java.io.InputStream;
+import java.util.ResourceBundle;
 import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -26,12 +27,9 @@ public class Manager extends Application {
     @FXML Text welcome;
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/manager/layout/base.fxml"));
-        Font Lemonada = Font.loadFont(Manager.class.getResource("/manager/resources/fonts/Lemonada.ttf").toExternalForm(), 10);
-        Font Font_Awesome = Font.loadFont(Manager.class.getResource("/manager/resources/fonts/fontawesome-webfont.ttf").toExternalForm(), 10);
-        Font Heartbit =  Font.loadFont(Manager.class.getResource("/manager/resources/fonts/Heartbit-Bold.otf").toExternalForm(), 10);
-        Font uzunduraz =  Font.loadFont(Manager.class.getResource("/manager/resources/fonts/uzunduraz_dirty.otf").toExternalForm(), 10);
-        Font Bellefair = Font.loadFont(Manager.class.getResource("/manager/resources/fonts/Bellefair-Regular.ttf").toExternalForm(), 10);
+        FXMLLoader loader = new FXMLLoader();
+            loader.setResources(ResourceBundle.getBundle("manager.resources.values.icons"));
+        Parent root = loader.load(getClass().getResourceAsStream("/manager/layouts/FXMLDocument.fxml"));
         Scene scene = new Scene(root, 1280, 720);
         stage.setScene(scene);
         stage.setResizable(false);
