@@ -23,27 +23,35 @@ import javafx.scene.text.Text;
  * @author root
  */
 public class BaseController implements Initializable{
-    @FXML public Pane hostPane;
+    
+    @FXML public AnchorPane hostPane;
     Pane pane;// landing pane for incoming fxml
-    void onLoad(){
+    void loadAndSet(String page){
         try {
-            pane = (Pane) FXMLLoader.load(getClass().getResource("/manager/layouts/home.fxml"));
-            hostPane.getChildren().add(pane);
+            FXMLLoader loader = new FXMLLoader();
+            loader.setResources(ResourceBundle.getBundle("manager.resources.values.icons"));
+            pane = (Pane) loader.load(getClass().getResourceAsStream("/manager/layouts/"+page+".fxml"));
+            adjustPane();
+            hostPane.getChildren().clear();
+            hostPane.getChildren().addAll(pane);
         } catch (IOException ex) {
             ex.printStackTrace(System.out);
         } 
+    }
+    void adjustPane(){
+        hostPane.setTopAnchor(pane, 0.0);
+            hostPane.setLeftAnchor(pane, 0.0);
+            hostPane.setRightAnchor(pane, 0.0);
+            hostPane.setBottomAnchor(pane, 0.0);
+    }
+    void onLoad(){
+        loadAndSet("home");
     }
     @FXML public void goHome(ActionEvent e){
-        
-        try {
-            pane = (Pane) FXMLLoader.load(getClass().getResource("/manager/layouts/home.fxml"));
-            hostPane.getChildren().add(pane);
-        } catch (IOException ex) {
-            ex.printStackTrace(System.out);
-        } 
+        loadAndSet("home");
     }
     @FXML public void showAllUser(ActionEvent e){
-        
+        loadAndSet("allUsers");
     }
     @FXML public void showActiveUsers(ActionEvent e){
         
